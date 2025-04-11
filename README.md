@@ -1,49 +1,67 @@
-# FraudBlock 🚫🔗
+# FraudBlock
 
-A **Blockchain-based Fake Product Detection System** that uses **QR codes** and **Ethereum smart contracts** to verify product authenticity.
+![GitHub](https://img.shields.io/github/last-commit/yogeshxd/FraudBlock)
 
-![Last Commit](https://img.shields.io/github/last-commit/imran1229/FraudBlock)
-![Tech](https://img.shields.io/badge/Built%20With-Solidity%2C%20Web3.js%2C%20Truffle-blue)
+```
+NOTE: Devlopement of this project has been stopped because I am working on newer projects so this repository will not be receving any updates.
+Last Update: Fixed issues with connecting with metamask.
+```
 
----
+### Blockchain based Fake product identification Solution using QR Codes
 
-## 📌 Project Overview
+## Installation & Demo
+[![FraudBlock](https://github.com/yogeshxd/FraudBlock/blob/main/Documents/image.png)](https://youtu.be/F01t48jT5wQ)
 
-FraudBlock helps consumers verify the authenticity of products by scanning QR codes linked to data stored on the blockchain. It prevents counterfeiting using smart contracts and decentralized technology.
+## Packages Required:-
+- Truffle v5.6.7 (core: 5.6.7)
+- Ganache v7.5.0
+- Solidity v0.5.16 (solc-js)
+- Node v16.20.0
+- Web3.js v1.7.4
+- npm 7.5.1
 
----
+## Other Requirements:-
+1. Any chromium based browser i.e. Chrome 
+2. Metamask browser extension
+    
+## Setup Process 
 
-## 🔧 Tech Stack
-
-- **Blockchain**: Ethereum, Solidity, Ganache
-- **Smart Contract Management**: Truffle
-- **Frontend**: HTML, CSS, JavaScript
-- **Web3 Integration**: Web3.js, MetaMask
-- **Backend**: Node.js
-
----
-
-## 🚀 How It Works
-
-1. Manufacturer registers a product on the blockchain.
-2. A QR code is generated with product data.
-3. Consumers scan the QR code to verify authenticity via MetaMask-connected frontend.
-4. Blockchain verifies and displays product legitimacy.
-
----
-
-## 📽️ Demo Video
-
-[![Watch the Demo](https://img.youtube.com/vi/F01t48jT5wQ/0.jpg)](https://youtu.be/F01t48jT5wQ)
-
----
-
-## 🛠️ Setup Instructions
-
-```bash
-git clone https://github.com/imran1229/FraudBlock.git
-cd FraudBlock
+1. Clone the project
+```
+git clone https://github.com/yogeshxd/FraudBlock
+```
+2. Go to the project folder, open terminal there and run following command to install required node_modules:-
+```
 npm install
+```
+3. Compile contract source files. (Compilation and deployment can be done using truffle migrate):-
+```
 truffle compile
+```
+4. Open Ganache, (to setup local blockchain)
+    - crerate new workspace
+    - add truffle-config.js  in truffle project 
+    - change port to 7545 in server settings (same as port in truffle-config.js)
+5. In chrome, open metamask 
+   - add new test network using  
+        - NETWORK ID (i.e. 5777 ,from Ganache Server settings) 
+        - RPC SERVER (i.e HTTP://127.0.0.1:7545 ,from Ganache Server settings)
+        - CHAIN CODE (i.e. 1337)
+   - import account using private key of any account from local blockchain available in Ganache.
+6. In terminal, run following commands:-
+- Run migrations to deploy contracts.
+```
 truffle migrate
-npm run dev
+```
+
+- To start a server and it will open a homepage (index.html) file in the default browser.
+```
+npm run dev 
+``` 
+7. Login to metamask ,and connect the added account to local blockchain by clicking the 'Connect Wallet' button on the homescreen.
+8. Interact with website
+
+### Psst... I have also added all the documents(reports, ppts, base paper etc.) incase anyone of you might wanna use it as your minor/major project.
+"# Fake-Product-Detection-using-Bloackchain" 
+"# Fake-Product-Detection-using-Bloackchain" 
+"# Fake-Product-Detection-using-Bloackchain" 
